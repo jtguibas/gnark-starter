@@ -17,15 +17,7 @@ type TestCircuit struct {
 }
 
 func (circuit *TestCircuit) Define(api frontend.API) error {
-	var output [12]frontend.Variable
-	for i := 0; i < 12; i++ {
-		output[i] = api.Add(circuit.In[i], 1)
-	}
-
-	for i := 0; i < 12; i++ {
-		api.AssertIsEqual(output[i], circuit.Out[i])
-	}
-
+	// TODO:
 	return nil
 }
 
